@@ -17,7 +17,7 @@ module Api
     def update
       @post.update(post_params)
 
-      render_post # здесь рендерим пост или высылаем head :no_content?
+      render_post
     end
 
     def destroy
