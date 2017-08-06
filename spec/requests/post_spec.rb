@@ -39,14 +39,14 @@ RSpec.describe 'Posts API', type: :request do
   end
 
   it 'updates an existing post' do
-    put '/api/posts/2', as: :json, params: updated_post
+    put "/api/posts/#{rand(1..5)}", as: :json, params: updated_post
 
     expect(json["body"]).to eq("corrected body")
     expect(json["username"]).to eq("totally_awesome_guy")
   end
 
   it 'deletes a post' do
-    delete '/api/posts/5'
+    delete "/api/posts/#{rand(1..5)}"
 
     expect(Post.all.length).to eq(4)
   end
