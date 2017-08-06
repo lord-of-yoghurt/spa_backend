@@ -3,3 +3,8 @@ sudo: false
 rvm:
   - 2.2.6
   - 2.3.3
+services:
+  - postgresql
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+  - "bundle exec rake db:migrate"
