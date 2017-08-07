@@ -1,0 +1,4 @@
+test:
+  adapter: postgresql
+  database: spa_backend_test
+  username: postgres
