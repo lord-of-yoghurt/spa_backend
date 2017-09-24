@@ -14,3 +14,7 @@
 !/tmp/.keep
 
 .byebug_history
+
+/config/provision/keys
+
+/.DS_Store
