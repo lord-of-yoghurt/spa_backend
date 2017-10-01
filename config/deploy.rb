@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock "3.9.1"
 
-server "67.205.165.127", user: "deploy", roles: %w{app db web}
+server ENV["IP_ADDRESS"], user: "deploy", roles: %w{app db web}
 
 set :application, "spa_backend"
 set :repo_url, "git://github.com/lord-of-yoghurt/spa_backend.git"
